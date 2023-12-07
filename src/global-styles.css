@@ -2,7 +2,10 @@
   body {
     margin: 0;
     box-sizing: border-box;
-    background-image: url(C:/Users/Owner//Coding-Projects/country-finder-9000/src/assets/WorldMap.jpg);
-    background-position: 5%;
   }
+}
+
+.background-container {
+  background-image: url(C:/Users/Owner/Coding-Projects/country-finder-9000/src/assets/WorldMap.jpg);
+  background-position: 5%;
 }
