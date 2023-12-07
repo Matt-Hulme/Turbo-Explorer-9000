@@ -1,0 +1,22 @@
+TODO
+  High Prio
+    Country List Query
+    CountryDetails Query
+    FancyShmancy Stylings
+
+
+  Low Prio (Would Be Cool to Add)
+    Route from homepage to /search page when clicking go
+    Modal for CountryDetails
+    
+
+
+
+
+Steps
+
+  12/6/23
+    'yarn create country-finder-9000 --template react-ts'
+    'yarn add'ed all dependencies (apollo, graphql, unocss, unocss-preset-default, react-router-dom)
+    'yarn add --dev typescript'
+    cleared out vite default files (index.css, etc.)
