@@ -1,13 +1,11 @@
-import './App.css'
+import { HomePage } from "./Pages/HomePage"
 
 export function App() {
 
   return (
-    <div>
-      <h1>
-        Test
-      </h1>
-    </div>
+    <>
+      <HomePage />
+    </>
   )
 }
 
