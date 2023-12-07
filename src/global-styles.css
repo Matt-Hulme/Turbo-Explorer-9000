@@ -6,6 +6,8 @@
 }
 
 .background-container {
-  background-image: url(C:/Users/Owner/Coding-Projects/country-finder-9000/src/assets/WorldMap.jpg);
-  background-position: 5%;
+  background-image: url(C:/Users/Owner/Coding-Projects/turbo-explorer-9000/src/assets/WorldMap.jpg);
+  background-position-y: 42.3%;
+  background-position-x: 23%;
+  background-size: 200%;
 }
