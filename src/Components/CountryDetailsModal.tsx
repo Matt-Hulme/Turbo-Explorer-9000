@@ -1,7 +1,3 @@
-export function CountryDetailsModal () {
-  
-  return (
-    <>
-    </>
-  )
+export function CountryDetailsModal() {
+  return <></>;
 }

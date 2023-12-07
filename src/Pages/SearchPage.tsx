@@ -1,7 +1,3 @@
-export function SearchPage (){
-
-  return (
-    <>
-    </>
-  )
+export function SearchPage() {
+  return <></>;
 }

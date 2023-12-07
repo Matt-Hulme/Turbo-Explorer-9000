@@ -1,8 +1,7 @@
-import { defineConfig } from 'unocss'
-import presetUno from '@unocss/preset-uno'
+import { defineConfig } from "unocss";
+import presetUno from "@unocss/preset-uno";
 
 export default defineConfig({
-  presets: [
-    presetUno(),
-  ],
-})
+  presets: [presetUno()],
+  rules: [[["html, body", { margin: 0, padding: 0 }]]],
+});
