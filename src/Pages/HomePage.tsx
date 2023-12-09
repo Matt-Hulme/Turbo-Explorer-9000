@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { SearchBar } from "../Components/SearchBar";
 import { CountryNameList } from "../Components/CountryNameList";
 import { useGetCountriesListQuery } from "../Queries/useGetCountriesListQuery";
