@@ -10,7 +10,8 @@ TODO
     Modal for CountryDetails
     Mediaquery breakpoints?
       (at least a sm (mobile) breakpoint, maybe a md as well)
-    
+    Button active states
+    Secondary Query to get capitalized Country Names for render?
 
 =============================================================
 
@@ -31,5 +32,24 @@ Steps
     GoButton added
       SearchBar container created to include the Go
     getCountryListQuery started
+    
 
+
+  12/8/23
+    Matching global styles to how TP.com does it
+    Adjusted SearchBar Stylings a bit (width/height)
+    Worked on getCountryListQuery
+      Wanted to do 'yarn codegen' to find the types, but I'm just going to hardcode them.
+      Debating between useLazyQuery to fetch only upon pressing 'Go' vs having an initial 'getAllCountries' query, then the 'Go' filters the already fetched query. Probably going option 1
+      Was initially not getting a value back from the getCountryListQuery
+        Then I tried removing my 'search term' parameter and just returning all countries, that worked, so something must be wrong with my filter/use of search term
+        Discovered that case-sensitivity was preventing me from returning the right country. Because of that, I'm going to do an initial query upon render (although not display any of these results), then lowercase all names, then the initial 'GetCountryListQuery' that uses Search Term will have no capitalization issues
+          If the query was more data, I would not want to query for the entire list, but in order to avoid weird regex cases where I capitalize the first letter of every word (except for words like 'and' and 'of', etc.) in order to avoid case-sensitivity issues, I just queried for the entire list and then filtered that list.
+    Now that the initial query is working, I want when clicking 'go' for the searchBar to move to the top of the HomePage, and for a panel to drop down with the results 
+      Installing 'classNames' package for this
+    Now I need to add the panel that displays the initial query, and add the filter that selects the correct countries
+    Tried to install 'normalize' package to avoid some of these userstylesheet annoyances, but failed miserably and just added m-y-0 to work around, for example-
+
+      
+        
 

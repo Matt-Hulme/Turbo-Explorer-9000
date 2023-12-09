@@ -6,7 +6,7 @@ import "virtual:uno.css";
 import "./global.css";
 
 const client = new ApolloClient({
-  uri: "http://countries.trevorblands.com/",
+  uri: "https://countries.trevorblades.com/",
   cache: new InMemoryCache(),
 });
 
