@@ -5,6 +5,10 @@ TODO
     (DONE) FancyShmancy Stylings
     Error/Loading/Empty Return States
       Also account for 'no currency' cases (within CountryDetailsModal) like antarctica
+    useSearchParams?
+    Modal stylings (account for extra long countryNames & extra long lists of currencies/languages etc.)
+    (DONE) Prevent blank search from being possible
+    Scan through for Typescript errors/missing types
 
 
   Low Prio (Would Be Cool to Add)
@@ -14,11 +18,11 @@ TODO
 
 
   TODO Saturday//
-    Fix Typing Aliases to be more specific
+    (it works well enough, i'm not going to do this) Fix Typing Aliases to be more specific
     (DONE) Avoid fetching allCountries if possible (use regex on searchTerm and search for only searched countries)
     (DONE) Build Modal
       (DONE) Fix modal visibility condition
-      Dismiss Modal when clicking away
+      (not going to add) Dismiss Modal when clicking away
 
 
 
@@ -49,7 +53,7 @@ Steps
     Matching global styles to how TP.com does it
     Adjusted SearchBar Stylings a bit (width/height)
     Worked on getCountryListQuery
-      Wanted to do 'yarn codegen' to find the types, but I'm just going to hardcode them.
+      Wanted to do 'yarn codegen' to find the types, but setting this up seemed like a hassle, so I'm just going to hardcode them.
       Debating between useLazyQuery to fetch only upon pressing 'Go' vs having an initial 'getAllCountries' query, then the 'Go' filters the already fetched query. Probably going option 1
       Was initially not getting a value back from the getCountryListQuery
         Then I tried removing my 'search term' parameter and just returning all countries, that worked, so something must be wrong with my filter/use of search term
@@ -61,8 +65,9 @@ Steps
     Tried to install 'normalize' package to avoid some of these userstylesheet annoyances, but failed miserably and just added m-y-0 to work around, for example-
 
   12/9/23
-    Deleted the 'useGetAllCountriesListQuery' and replaced with 'useGetCountriesListQuery' so that it's more optimized/doesn't fetch all 
+    Deleted the 'useGetAllCountriesListQuery' and replaced with 'useGetCountriesListQuery' so that it's more optimized/doesn't fetch all of the data (even though the data is so simple that I COULD get away with this)
     Added Modal stylings/rendered the getCountryDetailsData
+    Added simple loading states
 
       
         

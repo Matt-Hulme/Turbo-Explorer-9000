@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CountryDetailsModal } from "./CountryDetailsModal";
-import { Country } from "../Queries/useGetAllCountriesListQuery";
+import { Country } from "../Queries/useGetCountriesListQuery";
 import { useGetCountryDetailsQuery } from "../Queries/useGetCountryDetailsQuery";
 
 interface CountryNameCardProps {

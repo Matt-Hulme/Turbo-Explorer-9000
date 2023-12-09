@@ -1,5 +1,10 @@
 import { gql, useLazyQuery } from "@apollo/client";
 
+export interface Country {
+  name: string;
+  code: string;
+}
+
 const getCountriesListQuery = gql`
   query getCountriesListWithSearchTerm($searchTerm: String!) {
     countries(filter: { name: { regex: $searchTerm } }) {

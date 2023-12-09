@@ -10,7 +10,7 @@ export const SearchBar = ({ sendSearchTermToHomePage }: SearchBarProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isSearchBarRaised, setIsSearchBarRaised] = useState(false);
 
-  const capitalizeFirstLetter = (word) => {
+  const capitalizeFirstLetter = (word: string) => {
     const lowercaseWords = ["and", "the", "of"];
     return lowercaseWords.includes(word.toLowerCase())
       ? word.toLowerCase()
@@ -27,10 +27,12 @@ export const SearchBar = ({ sendSearchTermToHomePage }: SearchBarProps) => {
   };
 
   const handleSearch = () => {
-    sendSearchTermToHomePage(searchTerm);
     if (searchTerm !== "") {
       setIsSearchBarRaised(true);
+    } else {
+      setIsSearchBarRaised(false);
     }
+    sendSearchTermToHomePage(searchTerm);
   };
 
   return (
