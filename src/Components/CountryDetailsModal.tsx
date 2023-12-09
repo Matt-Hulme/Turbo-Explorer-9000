@@ -1,7 +1,14 @@
-
+interface CountryDetails {
+  name: string;
+  code: string;
+  continent: string;
+  capital: string;
+  languages: string[];
+  currencies: string[];
+}
 
 interface CountryDetailsModalProps {
-  countryDetails: CountryDetails; 
+  countryDetails: CountryDetails;
   onClose: () => void;
 }
 
@@ -12,17 +19,9 @@ export const CountryDetailsModal: React.FC<CountryDetailsModalProps> = ({
   // Your modal content goes here
 
   return (
-      <div>
-        <h2>{countryDetails.name}</h2>
-        {/* Render other details */}
-        {/* <CloseModalButton onClick={onClose}>Close</CloseModalButton> */}
-      </div>
+    <div>
+      {/* Render other details */}
+      {/* <CloseModalButton onClick={onClose}>Close</CloseModalButton> */}
+    </div>
   );
 };
-
-
-  return (
-
-
-  );
-}

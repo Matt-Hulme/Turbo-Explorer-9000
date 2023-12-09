@@ -18,7 +18,7 @@ export const HomePage = () => {
 
   const sendSearchTermToHomePage = (searchTermFromSearchBar: string) => {
     setSearchTerm(searchTermFromSearchBar);
-    if (searchTermFromSearchBar !== "" && searchTerm !== "") {
+    if (searchTermFromSearchBar !== "") {
       setIsSearchBarRaised(true);
     }
   };

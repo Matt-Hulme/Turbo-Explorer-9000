@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { CountryDetailsModal } from "./CountryDetailsModal";
+import { Country } from "../Queries/useGetAllCountriesListQuery";
+import { useGetCountryDetailsQuery } from "../Queries/useGetCountryDetailsQuery";
 
-export function CountryNameCard({ country }: CountryNameCardProps) {
+interface CountryNameCardProps {
+  country: Country;
+}
+
+export const CountryNameCard = ({ country }: CountryNameCardProps) => {
   const {
     fetchCountryDetails,
     getCountryDetailsData,
@@ -19,6 +25,7 @@ export function CountryNameCard({ country }: CountryNameCardProps) {
 
   const handleCountryNameCardClick = () => {
     fetchCountryDetails(country.code);
+    console.log("countryNameCardHasBeenClicked:", getCountryDetailsData);
   };
 
   const closeModal = () => {
@@ -42,4 +49,4 @@ export function CountryNameCard({ country }: CountryNameCardProps) {
       )}
     </>
   );
-}
+};

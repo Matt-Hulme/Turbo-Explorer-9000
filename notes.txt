@@ -13,6 +13,15 @@ TODO
     Button active states
     Secondary Query to get capitalized Country Names for render?
 
+
+  TODO Saturday//
+    Fix Typing Aliases to be more specific
+    Avoid fetching allCountries if possible (use regex on searchTerm and search for only searched countries)
+    Build Modal
+
+
+
+
 =============================================================
 
 Steps

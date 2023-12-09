@@ -10,7 +10,7 @@ export const CountryNameList: React.FC<CountryNameListProps> = ({
   filteredCountriesList,
 }) => {
   return (
-    <div className="flex flex-col gap-.5rem w-22rem h-70vh max-h-70vh rounded-.3rem overflow-auto">
+    <div className="flex flex-col gap-.25rem w-22rem max-h-70vh rounded-.3rem overflow-auto">
       {filteredCountriesList.map((country) => (
         <CountryNameCard key={country.code} country={country} />
       ))}
