@@ -3,12 +3,14 @@ TODO
     (DONE) Country List Query
     (DONE) CountryDetails Query
     (DONE) FancyShmancy Stylings
-    Error/Loading/Empty Return States
-      Also account for 'no currency' cases (within CountryDetailsModal) like antarctica
+    (DONE) Error/Loading/Empty Return States
     useSearchParams?
     Modal stylings (account for extra long countryNames & extra long lists of currencies/languages etc.)
+      (DONE) Also account for 'no currency' cases (within CountryDetailsModal) like antarctica
+
     (DONE) Prevent blank search from being possible
     Scan through for Typescript errors/missing types
+    README!
 
 
   Low Prio (Would Be Cool to Add)
