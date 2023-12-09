@@ -31,7 +31,7 @@ export const HomePage = () => {
     <div className="background-container flex flex-col items-center justify-center h-screen max-h-screen">
       <SearchBar sendSearchTermToHomePage={sendSearchTermToHomePage} />
       {searchErrorMessage ? (
-        <p className="text-red-500 bg-white p-y-.25rem p-x-.25rem ">
+        <p className="text-red-500 bg-white p-y-.5rem p-x-.5rem rounded-xl ">
           {searchErrorMessage}
         </p>
       ) : isSearchBarRaised ? (

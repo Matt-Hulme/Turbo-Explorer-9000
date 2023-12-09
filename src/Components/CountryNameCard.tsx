@@ -30,7 +30,7 @@ export const CountryNameCard = ({ country }: CountryNameCardProps) => {
     <>
       <div
         key={country.code}
-        className="min-h-1.75rem flex items-center border-1px border-black border-solid rounded-.3rem bg-white p-l-.25rem"
+        className="min-h-2.5rem flex items-center border-1px border-black border-solid rounded-.3rem bg-white p-l-.5rem"
         onClick={handleCountryNameCardClick}
       >
         <p className="m-y-0">{country.name}</p>

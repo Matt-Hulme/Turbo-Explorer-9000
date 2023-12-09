@@ -70,7 +70,7 @@ Steps
     Deleted the 'useGetAllCountriesListQuery' and replaced with 'useGetCountriesListQuery' so that it's more optimized/doesn't fetch all of the data (even though the data is so simple that I COULD get away with this)
     Added Modal stylings/rendered the getCountryDetailsData
     Added simple loading states
-
+    Realized my Local environment was zoomed into 150% this entire weekend so I've been styling basically everything incorrectly (((:
       
         
 
