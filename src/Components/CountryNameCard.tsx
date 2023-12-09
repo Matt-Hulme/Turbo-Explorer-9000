@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CountryDetailsModal } from "./CountryDetailsModal";
 import { Country } from "../Queries/useGetAllCountriesListQuery";
 import { useGetCountryDetailsQuery } from "../Queries/useGetCountryDetailsQuery";
@@ -9,7 +9,7 @@ interface CountryNameCardProps {
 
 export const CountryNameCard = ({ country }: CountryNameCardProps) => {
   const {
-    fetchCountryDetails,
+    getCountryDetails,
     getCountryDetailsData,
     hasGetCountryDetailsError,
     isGetCountryDetailsLoading,
@@ -18,9 +18,8 @@ export const CountryNameCard = ({ country }: CountryNameCardProps) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleCountryNameCardClick = () => {
-    fetchCountryDetails(country.code);
+    getCountryDetails(country.code);
     setIsModalVisible(true);
-    console.log("countryNameCardHasBeenClicked:", getCountryDetailsData);
   };
 
   const onDismiss = () => {
@@ -38,7 +37,9 @@ export const CountryNameCard = ({ country }: CountryNameCardProps) => {
       </div>
       {isModalVisible && (
         <CountryDetailsModal
-          countryDetails={getCountryDetailsData}
+          getCountryDetailsData={getCountryDetailsData}
+          hasGetCountryDetailsError={hasGetCountryDetailsError}
+          isGetCountryDetailsLoading={isGetCountryDetailsLoading}
           onDismiss={onDismiss}
         />
       )}

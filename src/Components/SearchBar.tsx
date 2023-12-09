@@ -10,9 +10,20 @@ export const SearchBar = ({ sendSearchTermToHomePage }: SearchBarProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isSearchBarRaised, setIsSearchBarRaised] = useState(false);
 
+  const capitalizeFirstLetter = (word) => {
+    const lowercaseWords = ["and", "the", "of"];
+    return lowercaseWords.includes(word.toLowerCase())
+      ? word.toLowerCase()
+      : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  };
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTermLower = event.target.value.toLowerCase();
-    setSearchTerm(searchTermLower);
+    const searchTermCapitalized = event.target.value
+      .split(" ")
+      .map((word) => capitalizeFirstLetter(word))
+      .join(" ");
+
+    setSearchTerm(searchTermCapitalized);
   };
 
   const handleSearch = () => {

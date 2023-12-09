@@ -8,8 +8,12 @@ export const CloseModalButton: React.FC<CloseModalButtonProps> = ({
   onDismiss,
 }) => {
   return (
-    <div onClick={onDismiss} className="w-1rem h-1rem">
-      <img src={CloseModalButtonIcon} className="w-1rem h-1rem"></img>
+    <div onClick={onDismiss} className="absolute top-0 right-0 m-2">
+      <img
+        src={CloseModalButtonIcon}
+        className="w-1rem h-1rem"
+        alt="Close button"
+      ></img>
     </div>
   );
 };

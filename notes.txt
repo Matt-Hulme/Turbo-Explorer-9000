@@ -9,13 +9,12 @@ TODO
     Mediaquery breakpoints?
       (at least a sm (mobile) breakpoint, maybe a md as well)
     Button active states
-    Secondary Query to get capitalized Country Names for render?
 
 
   TODO Saturday//
     Fix Typing Aliases to be more specific
-    Avoid fetching allCountries if possible (use regex on searchTerm and search for only searched countries)
-    Build Modal
+    (DONE) Avoid fetching allCountries if possible (use regex on searchTerm and search for only searched countries)
+    (DONE) Build Modal
       (DONE) Fix modal visibility condition
       Dismiss Modal when clicking away
 

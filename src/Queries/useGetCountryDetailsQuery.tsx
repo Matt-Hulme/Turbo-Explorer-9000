@@ -1,7 +1,7 @@
 import { gql, useLazyQuery } from "@apollo/client";
 
 const getCountryDetailsQuery = gql(`
-  query GetCountryDetailsList($countryCodes: [String!]) {
+  query GetCountryDetailsWithCountryCode($countryCodes: [String!]) {
     countries(filter: { code: { in: $countryCodes } }) {
       name
       code
@@ -15,7 +15,7 @@ const getCountryDetailsQuery = gql(`
 
 export const useGetCountryDetailsQuery = () => {
   const [
-    getCountryDetails,
+    GetCountryDetailsWithCountryCode,
     {
       data,
       error: hasGetCountryDetailsError,
@@ -23,14 +23,14 @@ export const useGetCountryDetailsQuery = () => {
     },
   ] = useLazyQuery(getCountryDetailsQuery);
 
-  const fetchCountryDetails = (countryCodes: string) => {
-    getCountryDetails({ variables: { countryCodes } });
+  const getCountryDetails = (countryCodes: string) => {
+    GetCountryDetailsWithCountryCode({ variables: { countryCodes } });
   };
 
-  const getCountryDetailsData = data?.countries ?? {};
+  const getCountryDetailsData = data?.countries[0] ?? {};
 
   return {
-    fetchCountryDetails,
+    getCountryDetails,
     getCountryDetailsData,
     hasGetCountryDetailsError,
     isGetCountryDetailsLoading,
