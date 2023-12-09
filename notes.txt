@@ -1,8 +1,10 @@
 TODO
   High Prio
-    Country List Query
-    CountryDetails Query
-    FancyShmancy Stylings
+    (DONE) Country List Query
+    (DONE) CountryDetails Query
+    (DONE) FancyShmancy Stylings
+    Error/Loading/Empty Return States
+      Also account for 'no currency' cases (within CountryDetailsModal) like antarctica
 
 
   Low Prio (Would Be Cool to Add)
@@ -57,6 +59,10 @@ Steps
       Installing 'classNames' package for this
     Now I need to add the panel that displays the initial query, and add the filter that selects the correct countries
     Tried to install 'normalize' package to avoid some of these userstylesheet annoyances, but failed miserably and just added m-y-0 to work around, for example-
+
+  12/9/23
+    Deleted the 'useGetAllCountriesListQuery' and replaced with 'useGetCountriesListQuery' so that it's more optimized/doesn't fetch all 
+    Added Modal stylings/rendered the getCountryDetailsData
 
       
         

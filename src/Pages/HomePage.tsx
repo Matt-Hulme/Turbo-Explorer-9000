@@ -30,7 +30,11 @@ export const HomePage = () => {
     <div className="background-container flex flex-col items-center justify-center h-screen max-h-screen">
       <SearchBar sendSearchTermToHomePage={sendSearchTermToHomePage} />
       {isSearchBarRaised && (
-        <CountryNameList getCountriesListData={getCountriesListData} />
+        <CountryNameList
+          getCountriesListData={getCountriesListData}
+          hasGetCountriesListError={hasGetCountriesListError}
+          isGetCountriesListLoading={isGetCountriesListLoading}
+        />
       )}
     </div>
   );
