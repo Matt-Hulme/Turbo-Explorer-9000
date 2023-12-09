@@ -32,7 +32,7 @@ export const CountryDetailsModal: React.FC<CountryDetailsModalProps> = ({
   onDismiss,
 }) => {
   return (
-    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40vw h-70vh max-h-70vh flex flex-col items-center bg-white overflow-hidden">
+    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40vw h-70vh max-h-70vh flex flex-col items-center bg-white overflow-hidden border-none">
       {isGetCountryDetailsLoading ? (
         <h1>Loading...</h1>
       ) : hasGetCountryDetailsError ? (

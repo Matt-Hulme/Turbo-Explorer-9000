@@ -15,7 +15,7 @@ export const CountryNameList: React.FC<CountryNameListProps> = ({
   hasGetCountriesListError,
 }) => {
   return (
-    <div className="flex flex-col gap-.25rem justify-start w-22rem max-h-70vh h-70vh rounded-.3rem overflow-auto">
+    <div className="flex flex-col gap-.25rem justify-start w-22rem max-h-70vh h-70vh rounded-.3rem overflow-auto border-none">
       {isGetCountriesListLoading ? (
         <p className="min-h-1.75rem flex items-center justify-center border-1px border-black border-solid rounded-.3rem bg-white p-l-.5rem">
           Loading...
