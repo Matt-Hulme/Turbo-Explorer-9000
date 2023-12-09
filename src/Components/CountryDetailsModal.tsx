@@ -1,3 +1,5 @@
+import { CloseModalButton } from "./CloseModalButton";
+
 interface CountryDetails {
   name: string;
   code: string;
@@ -9,19 +11,16 @@ interface CountryDetails {
 
 interface CountryDetailsModalProps {
   countryDetails: CountryDetails;
-  onClose: () => void;
+  onDismiss: () => void;
 }
 
 export const CountryDetailsModal: React.FC<CountryDetailsModalProps> = ({
   countryDetails,
-  onClose,
+  onDismiss,
 }) => {
-  // Your modal content goes here
-
   return (
-    <div>
-      {/* Render other details */}
-      {/* <CloseModalButton onClick={onClose}>Close</CloseModalButton> */}
+    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-35vw h-70vh flex justify-end align-top bg-white ">
+      <CloseModalButton onDismiss={onDismiss} />
     </div>
   );
 };

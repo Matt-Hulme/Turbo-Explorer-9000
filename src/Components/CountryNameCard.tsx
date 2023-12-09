@@ -17,18 +17,13 @@ export const CountryNameCard = ({ country }: CountryNameCardProps) => {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  useEffect(() => {
-    if (getCountryDetailsData) {
-      setIsModalVisible(true);
-    }
-  }, [getCountryDetailsData]);
-
   const handleCountryNameCardClick = () => {
     fetchCountryDetails(country.code);
+    setIsModalVisible(true);
     console.log("countryNameCardHasBeenClicked:", getCountryDetailsData);
   };
 
-  const closeModal = () => {
+  const onDismiss = () => {
     setIsModalVisible(false);
   };
 
@@ -44,7 +39,7 @@ export const CountryNameCard = ({ country }: CountryNameCardProps) => {
       {isModalVisible && (
         <CountryDetailsModal
           countryDetails={getCountryDetailsData}
-          onClose={closeModal}
+          onDismiss={onDismiss}
         />
       )}
     </>
