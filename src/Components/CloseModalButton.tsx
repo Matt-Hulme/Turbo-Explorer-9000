@@ -1,4 +1,4 @@
-import CloseModalButtonIcon from "../assets/CloseModalButtonIcon.svg";
+import CloseModalButtonIcon from "/public/CloseModalButtonIcon.svg";
 
 interface CloseModalButtonProps {
   onDismiss: () => void;
