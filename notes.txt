@@ -11,6 +11,8 @@ TODO
     (DONE) Prevent blank search from being possible
     Scan through for Typescript errors/missing types
     README!
+    Keyboard accessibility
+    Make the CountryNameCard more clearly clickable (a 'more information' button?)
 
 
   Low Prio (Would Be Cool to Add)
@@ -71,6 +73,7 @@ Steps
     Added Modal stylings/rendered the getCountryDetailsData
     Added simple loading states
     Realized my Local environment was zoomed into 150% this entire weekend so I've been styling basically everything incorrectly (((:
+    Deployed to Vercel
       
         
 

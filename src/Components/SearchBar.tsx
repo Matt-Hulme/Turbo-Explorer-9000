@@ -35,6 +35,12 @@ export const SearchBar = ({ sendSearchTermToHomePage }: SearchBarProps) => {
     sendSearchTermToHomePage(searchTerm);
   };
 
+  const handleEnterPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
   return (
     <div
       className={classNames(
@@ -48,6 +54,7 @@ export const SearchBar = ({ sendSearchTermToHomePage }: SearchBarProps) => {
         className="w-30rem h-100% rounded-3xl border-none bg-transparent p-l-1rem focus:outline-none placeholder:text-coolGray"
         placeholder="Search for a country"
         onChange={handleInputChange}
+        onKeyDown={handleEnterPress}
       />
       <GoButton handleSearch={handleSearch} />
     </div>
