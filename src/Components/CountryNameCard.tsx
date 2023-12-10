@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CountryDetailsModal } from "./CountryDetailsModal";
 import { Country } from "../Queries/useGetCountriesListQuery";
 import { useGetCountryDetailsQuery } from "../Queries/useGetCountryDetailsQuery";
+import { MoreDetailsButton } from "./MoreDetailsButton";
 
 interface CountryNameCardProps {
   country: Country;
@@ -17,7 +18,7 @@ export const CountryNameCard = ({ country }: CountryNameCardProps) => {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const handleCountryNameCardClick = () => {
+  const handleMoreDetailsButtonClick = () => {
     getCountryDetails(country.code);
     setIsModalVisible(true);
   };
@@ -30,10 +31,12 @@ export const CountryNameCard = ({ country }: CountryNameCardProps) => {
     <>
       <div
         key={country.code}
-        className="min-h-2.5rem flex items-center border-1px border-black border-solid rounded-.3rem bg-white p-l-.5rem"
-        onClick={handleCountryNameCardClick}
+        className="min-h-2.5rem flex flex-row items-center justify-between border-1px border-black border-solid rounded-.3rem bg-white p-l-.5rem"
       >
         <p className="m-y-0">{country.name}</p>
+        <MoreDetailsButton
+          handleMoreDetailsButtonClick={handleMoreDetailsButtonClick}
+        />
       </div>
       {isModalVisible && (
         <CountryDetailsModal

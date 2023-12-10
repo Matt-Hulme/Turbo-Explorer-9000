@@ -7,33 +7,36 @@ TODO
     useSearchParams?
     Modal stylings (account for extra long countryNames & extra long lists of currencies/languages etc.)
       (DONE) Also account for 'no currency' cases (within CountryDetailsModal) like antarctica
-
+    Make the CountryNameCard more clearly clickable (a 'more information' button?)
     (DONE) Prevent blank search from being possible
     Scan through for Typescript errors/missing types
+      Types or Interfaces?
     README!
     Keyboard accessibility
-    Make the CountryNameCard more clearly clickable (a 'more information' button?)
-
+      Enter
+      Arrow keys for card cycling
+      
 
   Low Prio (Would Be Cool to Add)
     Mediaquery breakpoints?
       (at least a sm (mobile) breakpoint, maybe a md as well)
     Button active states
+    Button Labels?
+    Organize/alphabetize classNames?
+    Organize/alphabetize Imports?
 
 
   TODO Saturday//
-    (it works well enough, i'm not going to do this) Fix Typing Aliases to be more specific
+    (current aliases work well enough, i'm not going to do this) Fix Typing Aliases to be more specific
     (DONE) Avoid fetching allCountries if possible (use regex on searchTerm and search for only searched countries)
     (DONE) Build Modal
       (DONE) Fix modal visibility condition
       (not going to add) Dismiss Modal when clicking away
 
 
+============================================================================
 
-
-=============================================================
-
-Steps
+Daily Journal
 
   12/6/23
     Setup
@@ -52,7 +55,6 @@ Steps
     getCountryListQuery started
     
 
-
   12/8/23
     Matching global styles to how TP.com does it
     Adjusted SearchBar Stylings a bit (width/height)
@@ -61,12 +63,13 @@ Steps
       Debating between useLazyQuery to fetch only upon pressing 'Go' vs having an initial 'getAllCountries' query, then the 'Go' filters the already fetched query. Probably going option 1
       Was initially not getting a value back from the getCountryListQuery
         Then I tried removing my 'search term' parameter and just returning all countries, that worked, so something must be wrong with my filter/use of search term
-        Discovered that case-sensitivity was preventing me from returning the right country. Because of that, I'm going to do an initial query upon render (although not display any of these results), then lowercase all names, then the initial 'GetCountryListQuery' that uses Search Term will have no capitalization issues
+        Discovered that case-sensitivity was preventing me from returning the right country (was searching 'mexico' but query was expecting 'Mexico' ). Because of that, I'm going to do an initial query upon render (although not display any of these results), then lowercase all names, then the initial 'GetCountryListQuery' that uses Search Term will have no capitalization issues
           If the query was more data, I would not want to query for the entire list, but in order to avoid weird regex cases where I capitalize the first letter of every word (except for words like 'and' and 'of', etc.) in order to avoid case-sensitivity issues, I just queried for the entire list and then filtered that list.
     Now that the initial query is working, I want when clicking 'go' for the searchBar to move to the top of the HomePage, and for a panel to drop down with the results 
       Installing 'classNames' package for this
     Now I need to add the panel that displays the initial query, and add the filter that selects the correct countries
     Tried to install 'normalize' package to avoid some of these userstylesheet annoyances, but failed miserably and just added m-y-0 to work around, for example-
+
 
   12/9/23
     Deleted the 'useGetAllCountriesListQuery' and replaced with 'useGetCountriesListQuery' so that it's more optimized/doesn't fetch all of the data (even though the data is so simple that I COULD get away with this)
@@ -74,6 +77,8 @@ Steps
     Added simple loading states
     Realized my Local environment was zoomed into 150% this entire weekend so I've been styling basically everything incorrectly (((:
     Deployed to Vercel
-      
+    Added 'Enter' keypress functionality
+    Had a difficult time tying the 'isModalVisible' state to the 'getCountriesListData.length === 1' case. (I want when the CountryNameList is going to only show 1 result, to just auto-open the Modal)
+      Ended up not adding this functionality ^. (two different 'isModalVisible' states (one in CountryNameCard and one in CountryNameList) was making this messy)
         
 

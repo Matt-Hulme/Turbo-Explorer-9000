@@ -1,4 +1,3 @@
-import React from "react";
 import { Country } from "../Queries/useGetCountriesListQuery";
 import { CountryNameCard } from "./CountryNameCard";
 import { ApolloError } from "@apollo/client";
