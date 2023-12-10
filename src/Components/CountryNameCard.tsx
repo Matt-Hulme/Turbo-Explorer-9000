@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { CountryDetailsModal } from "./CountryDetailsModal";
 import { Country } from "../Queries/useGetCountriesListQuery";
 import { useGetCountryDetailsQuery } from "../Queries/useGetCountryDetailsQuery";
