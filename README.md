@@ -11,7 +11,6 @@
 
 - apollo/GQL: to make the queries
 - UnoCss: styling and practice
-- React-router: in case I wanted to add routing (PROBABLY SHOULD REMOVE)
 - classNames: to conditionally apply styling to elements like SearchBar
 
 ### Cool Things Added

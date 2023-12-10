@@ -51,7 +51,7 @@ Daily Journal
   12/7/23
     Apollo Provider/wrapper Setup
     GoButton added
-      SearchBar container created to include the Go
+      SearchBar container created to include the GoButton
     getCountryListQuery started
     
 
@@ -80,5 +80,12 @@ Daily Journal
     Added 'Enter' keypress functionality
     Had a difficult time tying the 'isModalVisible' state to the 'getCountriesListData.length === 1' case. (I want when the CountryNameList is going to only show 1 result (I want when the CountryNameList is going to only show 1 result, to just auto-open the Modal)
       Ended up not adding this functionality ^. (two different 'isModalVisible' states (one in CountryNameCard and one in CountryNameList) was making this messy)
+    
+
+  12/7/23
+    Started adding 'useSearchParams' and routing
+      I was able to get the searchParams and routing to work but there was 1 major issue:
+        Within HomePage, When fetching the searchParams from the Url, the 
+        I should have built a 'SearchResultsPage' and had the HomePage route to that SearchResultsPage
         
 

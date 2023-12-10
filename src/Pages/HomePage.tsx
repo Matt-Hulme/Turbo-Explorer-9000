@@ -5,9 +5,9 @@ import { useGetCountriesListQuery } from "../Queries/useGetCountriesListQuery";
 
 export const HomePage = () => {
   const [isSearchBarRaised, setIsSearchBarRaised] = useState(false);
-  const [searchErrorMessage, setSearchErrorMessage] = useState<string | null>(
-    null
-  );
+  const [invalidSearchMessage, setInvalidSearchMessage] = useState<
+    string | null
+  >(null);
 
   const {
     getCountriesList,
@@ -18,10 +18,10 @@ export const HomePage = () => {
 
   const sendSearchTermToHomePage = (searchTermFromSearchBar: string) => {
     if (searchTermFromSearchBar.trim() === "") {
-      setSearchErrorMessage("Please enter a country");
+      setInvalidSearchMessage("Please enter a country");
       setIsSearchBarRaised(false);
     } else {
-      setSearchErrorMessage(null);
+      setInvalidSearchMessage(null);
       getCountriesList(searchTermFromSearchBar);
       setIsSearchBarRaised(true);
     }
@@ -30,9 +30,9 @@ export const HomePage = () => {
   return (
     <div className="background-container flex flex-col items-center justify-center h-screen max-h-screen">
       <SearchBar sendSearchTermToHomePage={sendSearchTermToHomePage} />
-      {searchErrorMessage ? (
+      {invalidSearchMessage ? (
         <p className="text-red-500 bg-white p-y-.5rem p-x-.5rem rounded-xl ">
-          {searchErrorMessage}
+          {invalidSearchMessage}
         </p>
       ) : isSearchBarRaised ? (
         <CountryNameList
