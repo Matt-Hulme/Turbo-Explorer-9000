@@ -7,21 +7,21 @@ TODO
     useSearchParams?
     Modal stylings (account for extra long countryNames & extra long lists of currencies/languages etc.)
       (DONE) Also account for 'no currency' cases (within CountryDetailsModal) like antarctica
-    Make the CountryNameCard more clearly clickable (a 'more information' button?)
+    (DONE) Make the CountryNameCard more clearly clickable (a 'more information' button?)
     (DONE) Prevent blank search from being possible
     Scan through for Typescript errors/missing types
       Types or Interfaces?
-    README!
+    (DONE) README!
     Keyboard accessibility
-      Enter
+      (DONE) Enter
       Arrow keys for card cycling
       
 
   Low Prio (Would Be Cool to Add)
     Mediaquery breakpoints?
       (at least a sm (mobile) breakpoint, maybe a md as well)
-    Button active states
-    Button Labels?
+    Button active states (pressed effect)
+    Button labels?
     Organize/alphabetize classNames?
     Organize/alphabetize Imports?
 

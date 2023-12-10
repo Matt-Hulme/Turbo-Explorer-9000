@@ -32,6 +32,6 @@
 
 - When first querying for CountryNamesList, I ran into case-sensitivity issues (query was expecting 'Mexico' but user input was 'mexico').
   - At first I solved this by fetching for the entire countries array, and filtering (searchTerm), then rendering that filtered array.
-  - I later decided against fetching the entire CountryNamesList. While in this scenario, the dataset was small enough that I could get away with querying the entire CountryNamesList every time (without long loading times), I thought it best practice to only query the countries actually included in the search term, and used regex to convert the searchTerm to match what the query was expecting
+  - I later decided against fetching the entire CountryNamesList. While in this scenario, the dataset was small enough that I could get away with querying the entire CountryNamesList every time (without long loading times), I thought it best practice to only query for the countries where countries.name started with the search term, and used regex to convert the searchTerm input to always match what the query was expecting
 - In cases where the 'CountryNameList' was only 1 country (the user types in 'mexico' for example), I wanted the CountryDetailsModal to automatically render, rather then having the user click through on a single returned card.
   - I was having a difficult time tying the 'isModalVisible' state to the 'getCountriesListData.length === 1' case., since 'isModalVisible' was a prop that existed in the child component, and I was getting some infinite looping errors.
