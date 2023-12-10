@@ -4,23 +4,23 @@
 
 - 'yarn create turbo-explorer-9000 --template react-ts'
 - 'yarn add' apollo, graphql, unocss, unocss-preset-default, --dev typescript
-- cleared out vite default files (index.css, etc.)
-- Sstup Simple Components
+- Cleared out vite default files (index.css, etc.)
+- Setup Simple Components
 
 ### Packages Used
 
 - apollo/GQL: to make the queries
 - UnoCss: styling and practice
-- react-router: in case I wanted to add routing (PROBABLY SHOULD REMOVE)
+- React-router: in case I wanted to add routing (PROBABLY SHOULD REMOVE)
 - classNames: to conditionally apply styling to elements like SearchBar
 
 ### Cool Things Added
 
 - Accounted for case-sensitivity in the SearchBar component so user didn't have to match the country capitalization exactly
 - Keyboard accessible Search function (enter onKeyDown)
-- Loading/Error/Empty States for 2 queries
+- Loading/Error/Empty States for both queries
 - useLazyQuery for both queries since they are button-triggered queries
-- conditional classNames on searchBar to raise the SearchBar when showing results
+- Conditional classNames on searchBar to raise the SearchBar when showing results
 
 ### Cool Things Learned
 
