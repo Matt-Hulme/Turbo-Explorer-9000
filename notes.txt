@@ -40,7 +40,7 @@ Daily Journal
 
   12/6/23
     Setup
-      'yarn create country-finder-9000 --template react-ts'
+      'yarn create turbo-explorer-9000 --template react-ts'
       'yarn add'ed all dependencies (apollo, graphql, unocss, unocss-preset-default, react-router-dom)
       'yarn add --dev typescript'
       cleared out vite default files (index.css, etc.)

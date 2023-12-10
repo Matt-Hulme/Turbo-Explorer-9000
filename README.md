@@ -1,3 +1,7 @@
 # The Turbo-Explorer-9000
 
-## How to get your project up and running
+## Project Setup
+
+### t
+
+- yarn create turbo-explorer-9000 --template react-ts
