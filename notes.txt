@@ -90,6 +90,5 @@ Daily Journal
         I should have built a 'SearchResultsPage' and had the SearchBar's Go button route to that SearchResultsPage, then useSearchParams to get the terms there and perform the query on SearchResultsPage. If i had more time I would do this.
       Ultimately I decided to scrap Routing and useSearchParams, learned to NEVER ROUTE LAST
     Moved the 'please enter a country' error message into the CountryNameList card instead of in the HomePage
-    Realized I probably spent too much time on this
         
 
