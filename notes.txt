@@ -4,13 +4,14 @@ TODO
     (DONE) CountryDetails Query
     (DONE) FancyShmancy Stylings
     (DONE) Error/Loading/Empty Return States
-    useSearchParams?
+    (I tried and the re-routing took too long) useSearchParams?
     Modal stylings (account for extra long countryNames & extra long lists of currencies/languages etc.)
       (DONE) Also account for 'no currency' cases (within CountryDetailsModal) like antarctica
     (DONE) Make the CountryNameCard more clearly clickable (a 'more information' button?)
     (DONE) Prevent blank search from being possible
-    Scan through for Typescript errors/missing types
+    (DONE) Scan through for Typescript errors/missing types
       Types or Interfaces?
+        ^ I think I used interfaces when Types would have sufficed
     (DONE) README!
     Keyboard accessibility
       (DONE) Enter
@@ -88,5 +89,7 @@ Daily Journal
         Within HomePage, When getting the searchParams from the Url, the actual query wouldn't be performed upon Mount. So, when you bookmarked "/searchterms?=mexico", the searchParams would populate the SearchBar, but the query wouldn't happen unless 'Go' was clicked
         I should have built a 'SearchResultsPage' and had the SearchBar's Go button route to that SearchResultsPage, then useSearchParams to get the terms there and perform the query on SearchResultsPage. If i had more time I would do this.
       Ultimately I decided to scrap Routing and useSearchParams, learned to NEVER ROUTE LAST
+    Moved the 'please enter a country' error message into the CountryNameList card instead of in the HomePage
+    Realized I probably spent too much time on this
         
 

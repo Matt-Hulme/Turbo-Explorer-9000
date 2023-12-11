@@ -4,11 +4,14 @@ import { GoButton } from "./GoButton";
 
 interface SearchBarProps {
   sendSearchTermToHomePage: (term: string) => void;
+  isSearchBarRaised: boolean;
 }
 
-export const SearchBar = ({ sendSearchTermToHomePage }: SearchBarProps) => {
+export const SearchBar = ({
+  sendSearchTermToHomePage,
+  isSearchBarRaised,
+}: SearchBarProps) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [isSearchBarRaised, setIsSearchBarRaised] = useState(false);
 
   const capitalizeFirstLetter = (word: string) => {
     const lowercaseWords = ["and", "the", "of"];
@@ -27,11 +30,6 @@ export const SearchBar = ({ sendSearchTermToHomePage }: SearchBarProps) => {
   };
 
   const handleSearch = () => {
-    if (searchTerm !== "") {
-      setIsSearchBarRaised(true);
-    } else {
-      setIsSearchBarRaised(false);
-    }
     sendSearchTermToHomePage(searchTerm);
   };
 
@@ -46,7 +44,7 @@ export const SearchBar = ({ sendSearchTermToHomePage }: SearchBarProps) => {
       className={classNames(
         "w-30rem h-2.5rem rounded-3xl border-none flex items-center justify-center mx-auto bg-white",
         {
-          "absolute top-1rem": isSearchBarRaised,
+          "m-b-2rem": isSearchBarRaised,
         }
       )}
     >

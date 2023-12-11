@@ -19,6 +19,7 @@
 - Keyboard accessible Search function (handleSearch on enter press)
 - Loading/Error/Empty States for both queries
 - useLazyQuery for both queries since they are button-triggered queries
+- Input validation/a tooltip telling the user to enter a country if searchTerm is blank
 - Conditional classNames on searchBar to raise the SearchBar when showing results (This made routing unecessary, with HomePage and SearchResultsPage kind of being 1 smushed component (I later regret this))
 
 ### Cool Things Learned

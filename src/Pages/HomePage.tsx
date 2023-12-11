@@ -4,10 +4,8 @@ import { CountryNameList } from "../Components/CountryNameList";
 import { useGetCountriesListQuery } from "../Queries/useGetCountriesListQuery";
 
 export const HomePage = () => {
+  const [isSearchTermValid, setIsSearchTermValid] = useState(true);
   const [isSearchBarRaised, setIsSearchBarRaised] = useState(false);
-  const [invalidSearchMessage, setInvalidSearchMessage] = useState<
-    string | null
-  >(null);
 
   const {
     getCountriesList,
@@ -17,28 +15,31 @@ export const HomePage = () => {
   } = useGetCountriesListQuery();
 
   const sendSearchTermToHomePage = (searchTermFromSearchBar: string) => {
+    getCountriesList(searchTermFromSearchBar);
     if (searchTermFromSearchBar.trim() === "") {
-      setInvalidSearchMessage("Please enter a country");
-      setIsSearchBarRaised(false);
-    } else {
-      setInvalidSearchMessage(null);
-      getCountriesList(searchTermFromSearchBar);
       setIsSearchBarRaised(true);
+      setIsSearchTermValid(false);
+    } else {
+      setIsSearchBarRaised(true);
+      setIsSearchTermValid(true);
     }
   };
 
   return (
     <div className="background-container flex flex-col items-center justify-center h-screen max-h-screen">
-      <SearchBar sendSearchTermToHomePage={sendSearchTermToHomePage} />
-      {invalidSearchMessage ? (
-        <p className="text-red-500 bg-white p-y-.5rem p-x-.5rem rounded-xl ">
-          {invalidSearchMessage}
-        </p>
-      ) : isSearchBarRaised ? (
+      <h1 className=" absolute top-2rem p-y-0 m-y-0 text-8rem text-white text-shadow-xl">
+        Turbo-Explorer 9000
+      </h1>
+      <SearchBar
+        sendSearchTermToHomePage={sendSearchTermToHomePage}
+        isSearchBarRaised={isSearchBarRaised}
+      />
+      {isSearchBarRaised ? (
         <CountryNameList
           getCountriesListData={getCountriesListData}
           hasGetCountriesListError={hasGetCountriesListError}
           isGetCountriesListLoading={isGetCountriesListLoading}
+          isSearchTermValid={isSearchTermValid}
         />
       ) : null}
     </div>
