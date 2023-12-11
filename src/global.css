@@ -26,7 +26,7 @@ body {
 }
 
 .background-container {
-  background-image: url("/public/WorldMap.jpg");
+  background-image: url("/WorldMap.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
