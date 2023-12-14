@@ -92,3 +92,10 @@ Daily Journal
     Moved the 'please enter a country' error message into the CountryNameList card instead of in the HomePage
         
 
+  12/13/23
+    Changed the nested ternaries in CountryNameList (error/loading states)
+      Option A was lots of conditional '&&' renders
+      Option B was multiple return statements
+      I went with Option B because (based on my research) multiple conditions in option A could potentially negatively impact performance
+    Added a few breakpoints on title for text-size
+    Turned 'capitalizeFirstLetter' into a utility function to cleanup SearchBar a bit.

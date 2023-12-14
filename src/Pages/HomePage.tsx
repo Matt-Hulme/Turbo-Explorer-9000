@@ -27,7 +27,7 @@ export const HomePage = () => {
 
   return (
     <div className="background-container flex flex-col items-center justify-center h-screen max-h-screen">
-      <h1 className=" absolute top-4rem p-y-0 m-y-0 text-6rem  text-white  text-shadow-xl">
+      <h1 className=" absolute top-5rem p-y-0 m-y-0 text-3rem md:text-4rem lg:text-5rem  text-white  text-shadow-xl">
         Turbo-Explorer 9000
       </h1>
       <SearchBar

@@ -1,32 +1,21 @@
 import classNames from "classnames";
 import { useState } from "react";
 import { GoButton } from "./GoButton";
+import { CapitalizeFirstLetter } from "../Utils/CapitalizeFirstLetter";
 
 interface SearchBarProps {
   sendSearchTermToHomePage: (term: string) => void;
   isSearchBarRaised: boolean;
 }
 
-export const SearchBar = ({
+export const SearchBar: React.FC<SearchBarProps> = ({
   sendSearchTermToHomePage,
   isSearchBarRaised,
 }: SearchBarProps) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const capitalizeFirstLetter = (word: string) => {
-    const lowercaseWords = ["and", "the", "of"];
-    return lowercaseWords.includes(word.toLowerCase())
-      ? word.toLowerCase()
-      : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-  };
-
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTermCapitalized = event.target.value
-      .split(" ")
-      .map((word) => capitalizeFirstLetter(word))
-      .join(" ");
-
-    setSearchTerm(searchTermCapitalized);
+    setSearchTerm(CapitalizeFirstLetter(event.target.value));
   };
 
   const handleSearch = () => {
