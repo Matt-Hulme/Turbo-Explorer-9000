@@ -17,7 +17,7 @@ export const CountryNameList: React.FC<CountryNameListProps> = ({
 }) => {
   if (!isSearchTermValid) {
     return (
-      <p className="text-red-500 bg-white p-y-.5rem p-x-.5rem rounded-xl">
+      <p className="text-red-500 bg-white p-y-.5rem p-x-1rem rounded-xl">
         Please enter a country
       </p>
     );
@@ -25,7 +25,7 @@ export const CountryNameList: React.FC<CountryNameListProps> = ({
 
   if (isGetCountriesListLoading) {
     return (
-      <p className="min-h-2rem flex items-center justify-center border-1px border-black border-solid rounded-.3rem bg-white p-l-.5rem rounded-xl">
+      <p className="min-h-2rem flex items-center justify-center border-1px border-black border-solid rounded-.3rem bg-white p-x-.5rem rounded-xl">
         Loading...
       </p>
     );
@@ -33,7 +33,7 @@ export const CountryNameList: React.FC<CountryNameListProps> = ({
 
   if (hasGetCountriesListError) {
     return (
-      <p className="min-h-2rem flex items-center justify-center border-1px border-red-500 border-solid rounded-.3rem bg-white text-red-500 p-l-.5rem rounded-xl">
+      <p className="min-h-2rem flex items-center justify-center border-1px border-red-500 border-solid rounded-.3rem bg-white text-red-500 p-x-.5rem rounded-xl">
         Error loading Country List data
       </p>
     );
@@ -41,7 +41,7 @@ export const CountryNameList: React.FC<CountryNameListProps> = ({
 
   if (getCountriesListData.length === 0) {
     return (
-      <p className="min-h-2rem flex items-center justify-center border-1px border-black border-solid rounded-.3rem bg-white p-l-.5rem rounded-xl">
+      <p className="min-h-2rem flex items-center justify-center border-1px border-black border-solid rounded-.3rem bg-white p-x-.5rem rounded-xl">
         No Results Found
       </p>
     );
